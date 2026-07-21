@@ -22,3 +22,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Jekyll build output folder
+/_site/
+
+# Jekyll build cache and metadata
+/.jekyll-cache/
+/.jekyll-metadata
+
+# Local Ruby environment bundles and dependencies
+/.bundle/
+/vendor/bundle/
