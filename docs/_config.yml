@@ -2,6 +2,9 @@ remote_theme: pages-themes/slate@v0.2.0
 plugins:
   - jekyll-remote-theme
 
-title: Your Project Title
-description: A short description of your website or software project.
-show_downloads: true
+title: Java Migration Guide
+description: Practical tutorials for upgrading from Java 8 to 25.
+show_downloads: false
+
+# Ensures clean URLs (e.g., ://mysite.com instead of needing .html)
+permalink: /:path/
