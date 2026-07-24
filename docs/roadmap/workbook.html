@@ -1,0 +1,304 @@
+---
+layout: default
+title: "Detailed Workbook Structure Overview"
+description: "Comprehensive architectural breakdown of the Java 8 to Java 25 Upgrade Roadmap Excel workbook, detailing all five worksheets and their enterprise migration scope."
+nav_order: 0
+parent: "Java Upgrade Roadmap"
+---
+
+<div class="container-lg px-3 my-5 markdown-body">
+  <!-- Page Header -->
+  <div class="pb-3 mb-4 border-bottom">
+    <h1 class="d-inline-block">Detailed Workbook Structure Overview</h1>
+    <p class="f4 color-fg-muted">
+      An architectural and structural breakdown of the <code>Java_Upgrade_Roadmap_8_to_25.xlsx</code> enterprise reference workbook. <a href="Java_Upgrade_Roadmap_8_to_25.xlsx">Click here</a> to download the workbook.
+    </p>
+  </div>
+
+  <!-- Callout: Workbook Notice -->
+  <div class="p-3 mb-4 border border-blue rounded-2 color-bg-subtle">
+    <div class="d-flex align-items-center mb-1">
+      <svg class="octicon octicon-info mr-2 color-fg-accent" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+      </svg>
+      <strong class="color-fg-default">Enterprise Migration Reference</strong>
+    </div>
+    <p class="mb-0 text-small color-fg-muted">
+      This workbook is structured to serve dual purposes: executing large-scale enterprise migration planning across modern Java Long-Term Support (LTS) releases and providing a structured learning curriculum for senior engineering interviews.
+    </p>
+  </div>
+
+  <!-- Executive Summary Table -->
+  <h2 id="workbook-summary">Workbook Architecture Summary</h2>
+  <p>The workbook is organized into five specialized worksheets, each designed for a distinct technical workflow:</p>
+
+  <div class="overflow-auto mb-5">
+    <table class="table table-striped width-full">
+      <thead>
+        <tr>
+          <th align="left">Sheet Name</th>
+          <th align="left">Primary Focus</th>
+          <th align="left">Target Audience</th>
+          <th align="center">Approx. Rows</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code><a href="#sheet-1-complete_feature_list">Complete_Feature_List</a></code></td>
+          <td>Exhaustive inventory of all features introduced from Java 9 to Java 25.</td>
+          <td>Software Architects &amp; Migration Leads</td>
+          <td align="center">150+</td>
+        </tr>
+        <tr>
+          <td><code><a href="#sheet-2-top_features">Top_Features</a></code></td>
+          <td>The 35 highest-priority features for immediate adoption and interviews.</td>
+          <td>Senior Developers &amp; Candidates</td>
+          <td align="center">35–40</td>
+        </tr>
+        <tr>
+          <td><code><a href="#sheet-3-java_version_summary">Java_Version_Summary</a></code></td>
+          <td>High-level release cadence, LTS statuses, and major architectural shifts.</td>
+          <td>Engineering Managers &amp; DevOps</td>
+          <td align="center">17</td>
+        </tr>
+        <tr>
+          <td><code><a href="#sheet-4-removed_or_deprecated_features">Removed_or_Deprecated_Features</a></code></td>
+          <td>Sunset APIs, removed garbage collectors, and required replacements.</td>
+          <td>Legacy Codebase Maintainers</td>
+          <td align="center">15–20</td>
+        </tr>
+        <tr>
+          <td><code><a href="#sheet-5-learning_roadmap">Learning_Roadmap</a></code></td>
+          <td>Step-by-step sequential study curriculum with hands-on project ideas.</td>
+          <td>Upskilling Engineering Teams</td>
+          <td align="center">21–25</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr />
+
+  <!-- Sheet 1 Details -->
+  <section class="my-5">
+    <h2 id="sheet-1-complete_feature_list">
+      <span class="text-normal color-fg-muted">Sheet 1:</span> Complete_Feature_List
+    </h2>
+    <p>
+      The comprehensive repository of Java enhancements introduced between <strong>Java 9 and Java 25</strong>. It serves as the single source of truth for architectural evaluation and dependency auditing.
+    </p>
+
+    <h3 id="sheet-1-columns">Column Definitions</h3>
+    <ul>
+      <li><strong>Java Version Introduced:</strong> The specific JDK release where the feature first appeared.</li>
+      <li><strong>Feature Name:</strong> Official title of the language, JVM, library, or tooling enhancement.</li>
+      <li><strong>Category:</strong> Functional classification (e.g., <code>Language</code>, <code>Pattern Matching</code>, <code>Records</code>, <code>Virtual Threads</code>, <code>Garbage Collector</code>, <code>Panama</code>, <code>Vector API</code>, <code>Security</code>).</li>
+      <li><strong>Short Description:</strong> concise technical summary of the capability and its architectural intent.</li>
+      <li><strong>JEP Number:</strong> The official JDK Enhancement Proposal identifier with an active hyperlink.</li>
+      <li><strong>Preview Since / Final Since / Removed In:</strong> Full lifecycle tracking across preview incarnations to final standard graduation or deprecation/removal.</li>
+      <li><strong>LTS Version:</strong> Indicates whether the feature reached standard status in a Long-Term Support release (<code>Java 11</code>, <code>Java 17</code>, <code>Java 21</code>, or <code>Java 25</code>).</li>
+      <li><strong>Common Usage &amp; Interview Frequency (1–5):</strong> Numerical ratings evaluating real-world production ubiquity and interview occurrence.</li>
+      <li><strong>Learn Priority:</strong> Color-coded priority matrix (<code>High</code> = Red, <code>Medium</code> = Yellow, <code>Low</code> = Green).</li>
+      <li><strong>Sample Project Idea:</strong> Actionable coding tasks to benchmark or validate the enhancement.</li>
+      <li><strong>Official Oracle/OpenJDK Link &amp; Remarks:</strong> Deep links to primary documentation and architectural notes.</li>
+    </ul>
+
+    <h3 id="sheet-1-categories">Covered Feature Categories</h3>
+    <div class="d-flex flex-wrap gap-2 my-3">
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Language</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Pattern Matching</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Records</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Sealed Types</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Collections &amp; Streams</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Virtual Threads</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Structured Concurrency</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Scoped Values</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Project Panama (FFM)</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Garbage Collectors (ZGC/Shenandoah)</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">JVM Performance &amp; Headers</span>
+      <span class="IssueLabel color-bg-accent color-fg-on-emphasis mr-1 mb-1 p-1 rounded-1 text-small">Security &amp; Cryptography</span>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Sheet 2 Details -->
+  <section class="my-5">
+    <h2 id="sheet-2-top_features">
+      <span class="text-normal color-fg-muted">Sheet 2:</span> Top_Features
+    </h2>
+    <p>
+      A curated, highly focused subset of the <strong>35 most critical features</strong> that enterprise Java developers should prioritize. This sheet eliminates noise by isolating features that fundamentally alter daily coding practices and system architecture.
+    </p>
+
+    <div class="color-bg-subtle p-3 my-3 rounded-2 border border-muted">
+      <h4 class="mb-2">Key Highlights Included in Top Features:</h4>
+      <ul class="mb-0">
+        <li><strong>Modern Syntax:</strong> Local-Variable Type Inference (<code>var</code>), Text Blocks, Switch Expressions.</li>
+        <li><strong>Data-Oriented Programming:</strong> Records, Sealed Classes, Pattern Matching for <code>instanceof</code> and <code>switch</code>, Record Patterns.</li>
+        <li><strong>Project Loom Concurrency:</strong> Virtual Threads, Structured Concurrency, Scoped Values.</li>
+        <li><strong>Core Library Upgrades:</strong> Standard <code>HttpClient</code>, Collection Factory Methods (<code>List.of</code>), Sequenced Collections, Stream Gatherers (<code>JEP 485</code>), <code>Stream.toList()</code>.</li>
+        <li><strong>JVM &amp; Tooling Diagnostics:</strong> Helpful NullPointerExceptions, Compact Object Headers (<code>JEP 519</code>), Flexible Constructor Bodies (<code>JEP 513</code>).</li>
+      </ul>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Sheet 3 Details -->
+  <section class="my-5">
+    <h2 id="sheet-3-java_version_summary">
+      <span class="text-normal color-fg-muted">Sheet 3:</span> Java_Version_Summary
+    </h2>
+    <p>
+      An executive-level matrix providing a one-row-per-release overview of the Java ecosystem evolution from Java 9 through Java 25.
+    </p>
+
+    <div class="overflow-auto my-3">
+      <table class="table table-bordered width-full text-small">
+        <thead>
+          <tr class="color-bg-subtle">
+            <th>Column Name</th>
+            <th>Description &amp; Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Version</code> &amp; <code>Release Date</code></td>
+            <td>Tracks the predictable 6-month release cadence established in Java 10.</td>
+          </tr>
+          <tr>
+            <td><code>LTS Status</code></td>
+            <td>Highlights Long-Term Support checkpoints: <strong>Java 11</strong>, <strong>Java 17</strong>, <strong>Java 21</strong>, and <strong>Java 25</strong>.</td>
+          </tr>
+          <tr>
+            <td><code>Major Language &amp; API Additions</code></td>
+            <td>Summarizes developer-facing syntax and core library expansions per release.</td>
+          </tr>
+          <tr>
+            <td><code>Major JVM Improvements</code></td>
+            <td>Details garbage collection evolutions (G1 default, ZGC, Shenandoah), memory optimizations (Metaspace, Compact Object Headers), and startup enhancements (CDS, AOT).</td>
+          </tr>
+          <tr>
+            <td><code>Major Removed Features</code></td>
+            <td>Flags critical deprecations or removals occurring in that JDK cycle.</td>
+          </tr>
+          <tr>
+            <td><code>Important JEPs</code></td>
+            <td>Quick-reference list of primary JEP numbers defining the release.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Sheet 4 Details -->
+  <section class="my-5">
+    <h2 id="sheet-4-removed_or_deprecated_features">
+      <span class="text-normal color-fg-muted">Sheet 4:</span> Removed_or_Deprecated_Features
+    </h2>
+    <p>
+      A vital risk-mitigation worksheet for migration leads auditing legacy codebases. It documents features that have been phased out, ensuring systems do not rely on dead technologies before executing a JVM upgrade.
+    </p>
+
+    <!-- Warning Callout -->
+    <div class="p-3 my-3 border border-red rounded-2 color-bg-subtle">
+      <div class="d-flex align-items-center mb-1">
+        <svg class="octicon octicon-alert mr-2 color-fg-danger" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+        </svg>
+        <strong class="color-fg-danger">High-Impact Architectural Removals</strong>
+      </div>
+      <p class="mb-0 text-small color-fg-muted">
+        Upgrading to modern Java LTS releases will cause runtime or compile-time failures if legacy components such as the <strong>Security Manager</strong> (permanently disabled in Java 24), <strong>Concurrent Mark Sweep (CMS) GC</strong> (removed in Java 14), or <strong>Java EE / CORBA modules</strong> (removed in Java 11) are not explicitly replaced.
+      </p>
+    </div>
+
+    <h3 id="sheet-4-columns">Key Columns Tracked</h3>
+    <ul>
+      <li><strong>Feature Name:</strong> The sunset API, tool, or JVM component.</li>
+      <li><strong>Introduced / Deprecated / Removed:</strong> Exact JDK milestones marking the deprecation and removal lifecycle.</li>
+      <li><strong>Official Replacement:</strong> Modern JDK alternative or industry-standard external library (e.g., migrating <code>sun.misc.Unsafe</code> to the standard <strong>Foreign Function &amp; Memory API</strong> or <strong>VarHandles</strong>).</li>
+      <li><strong>Migration Impact:</strong> Qualitative assessment (<code>High</code>, <code>Medium</code>, <code>Low</code>) detailing the refactoring scope required for legacy enterprise applications.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <!-- Sheet 5 Details -->
+  <section class="my-5">
+    <h2 id="sheet-5-learning_roadmap">
+      <span class="text-normal color-fg-muted">Sheet 5:</span> Learning_Roadmap
+    </h2>
+    <p>
+      A sequential, pedagogical curriculum designed to transition a Java 8 developer to Java 25 proficiency. The features are ordered logically by concept dependency rather than strict chronological release dates.
+    </p>
+
+    <div class="row my-4">
+      <div class="col-12 col-md-4 mb-3">
+        <div class="p-3 border rounded-2 height-full">
+          <h4 class="text-small text-uppercase color-fg-muted mb-1">Phase 1: Foundation</h4>
+          <strong>Syntax &amp; Core APIs</strong>
+          <p class="text-small color-fg-muted mt-2 mb-0">
+            Focuses on immediate readability and quality-of-life wins: <code>var</code>, Collection Factory Methods, Text Blocks, and modern String/File I/O utilities.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <div class="p-3 border rounded-2 height-full">
+          <h4 class="text-small text-uppercase color-fg-muted mb-1">Phase 2: Data Modeling</h4>
+          <strong>Data-Oriented Programming</strong>
+          <p class="text-small color-fg-muted mt-2 mb-0">
+            Mastering domain modeling using immutable Records, Sealed Hierarchies, and exhaustive Pattern Matching across switch statements and record deconstruction.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <div class="p-3 border rounded-2 height-full">
+          <h4 class="text-small text-uppercase color-fg-muted mb-1">Phase 3: Advanced</h4>
+          <strong>Concurrency &amp; Internals</strong>
+          <p class="text-small color-fg-muted mt-2 mb-0">
+            Deep dive into Project Loom (Virtual Threads, Structured Concurrency, Scoped Values), Stream Gatherers, and off-heap native access via Project Panama.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h3 id="sheet-5-columns">Curriculum Structure</h3>
+    <ul>
+      <li><strong>Step (1 to 21+):</strong> Recommended sequence for individual study or engineering team upskilling workshops.</li>
+      <li><strong>Difficulty:</strong> Classified as <code>Beginner</code>, <code>Intermediate</code>, or <code>Advanced</code>.</li>
+      <li><strong>Estimated Learning Time:</strong> Realistic time allocation required to master the underlying mechanics.</li>
+      <li><strong>Project Idea:</strong> A practical coding exercise designed to reinforce the feature's architectural benefits in a realistic scenario.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <!-- Verification & References -->
+  <section class="my-5">
+    <h2 id="verification--official-references">Verification &amp; Official References</h2>
+    <p>
+      Every enhancement, JEP number, and lifecycle milestone in this workbook has been validated against official OpenJDK and Oracle technical documentation:
+    </p>
+    <ul>
+      <li>
+        <a href="https://openjdk.org/jeps/0" target="_blank" rel="noopener noreferrer">
+          <strong>OpenJDK JEP Master Index</strong>
+        </a> – Complete repository of JDK Enhancement Proposals.
+      </li>
+      <li>
+        <a href="https://docs.oracle.com/en/java/javase/" target="_blank" rel="noopener noreferrer">
+          <strong>Oracle Java SE Documentation &amp; Release Notes</strong>
+        </a> – Official API specifications and migration guides.
+      </li>
+      <li>
+        <a href="https://docs.oracle.com/javase/specs/" target="_blank" rel="noopener noreferrer">
+          <strong>Java Language Specification (JLS) &amp; JVM Specification</strong>
+        </a> – Definitive rules for syntax semantics and bytecode execution.
+      </li>
+    </ul>
+  </section>
+</div>
