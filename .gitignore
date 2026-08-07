@@ -33,3 +33,5 @@ replay_pid*
 # Local Ruby environment bundles and dependencies
 /.bundle/
 /vendor/bundle/
+code-labs/feature-collection-factory/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+code-labs/feature-collection-factory/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
